@@ -29,6 +29,8 @@ body{
 
 .wrapper{
     margin-inline: auto;
+    padding-inline: 2rem;
+    width: min(50rem,100%);
 }
 
 ul{
@@ -46,7 +48,6 @@ nav{
     top: 0;
     width: 100vw;
     z-index: 100;
-    background: var(--background-headers);
 }
 
 nav .wrapper{
@@ -69,21 +70,89 @@ nav.scroll .open-menu svg path {
     stroke: #FFFFFF;
 }
 
-/* ================= HEADER ================= */
+/* ================= TOPO ================= */
 header{
     background-color: var(--background-headers);
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
 }
 
-select{
+header #content p{
+    font-size: 1.2rem;
+}
+
+header #content h3{
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.2rem;
+}
+
+#user-settings .wrapper{
+    background-color: var(--background-headers);
     display: flex;
-    background: url('assets/language-image.png');
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.wrapper #lang{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #CCCCCC;
+    border-radius: 0.3rem;
+    width: 9.7rem;
+    justify-content: center;
+    background-color: var(--background-headers)
+}
+
+.wrapper #lang select{
+    background: url('assets/dropdown.png');
     background-color: var(--background-headers);
     background-repeat: no-repeat;
-    padding: 0.1rem 0 0 2.2rem;
+    padding-right: 1.5rem;
+    background-position-x: 5.5rem;
+    background-position-y: center;
     font-family: 'Quicksand', sans-serif;
     font-size: 1.4rem;
     color: #333333;
     line-height: 1.7rem;
-    border: 1px solid #CCCCCC;
-    border-radius: 0.33rem;
+    border: none;
+    appearance: none;
+    width: fit-content;
 }
+
+.wrapper #user{
+    
+    display: grid;
+    grid-template-areas: 'A C'
+                        'B C';
+    width: fit-content;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.wrapper #user p:nth-child(1){
+    grid-area: A;
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+.wrapper #user p + p{
+    grid-area: B;
+    font-size: 1rem;
+}
+
+.wrapper #user #avatar{
+    grid-area: C;
+    display: flex;
+    justify-content: right;
+}
+
+.wrapper #user #avatar svg:nth-child(1){
+    position: relative;
+}
+
+.wrapper #user #avatar svg+svg{
+    position: absolute;
+    
+}
+
