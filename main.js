@@ -19,5 +19,14 @@ function openMenu(){
 }
 
 function closeMenu(){
-    documento.body.classList.remove('menu-expanded')
+    document.body.classList.remove('menu-expanded')
+}
+
+function favoriteButton(){
+    if(favorite.classList.contains('fav')){
+        favorite.classList.remove('fav');
+    }
+    else{
+        favorite.classList.add('fav')
+    }
 }

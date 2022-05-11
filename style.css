@@ -11,6 +11,7 @@ font-family: 'Roboto', sans-serif; */
     font-size: 62.5%;
     --background-headers: hsl(20,82%,96%);
     --primary-color: hsl(21, 83%, 58%);
+    --button-hover:hsl(21, 78%, 42%);
 }
 
 html{
@@ -25,6 +26,7 @@ html, body{
 body{
     text-align: center;
     background: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
 }
 
 .wrapper{
@@ -71,11 +73,14 @@ nav.scroll .open-menu svg path {
 }
 
 /* ================= TOPO ================= */
-header{
+header#main-header{
     background-color: var(--background-headers);
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
+    color: #725C5C;
+    padding-block: 1rem;
+    width: 100vw;
 }
 
 header #content p{
@@ -88,11 +93,18 @@ header #content h3{
     font-size: 2.2rem;
 }
 
-#user-settings .wrapper{
+#user-settings{
+    width: 100vw;
     background-color: var(--background-headers);
+    color: #333333;
+    border-top: 0.5px solid white;
+}
+
+#user-settings .wrapper{
+    padding-block: 1rem;
     display: flex;
     justify-content: space-between;
-    width: 100vw;
+    align-items: center;
 }
 
 .wrapper #lang{
@@ -102,7 +114,8 @@ header #content h3{
     border-radius: 0.3rem;
     width: 9.7rem;
     justify-content: center;
-    background-color: var(--background-headers)
+    background-color: var(--background-headers);
+    height: fit-content;
 }
 
 .wrapper #lang select{
@@ -114,7 +127,7 @@ header #content h3{
     background-position-y: center;
     font-family: 'Quicksand', sans-serif;
     font-size: 1.4rem;
-    color: #333333;
+
     line-height: 1.7rem;
     border: none;
     appearance: none;
@@ -156,3 +169,115 @@ header #content h3{
     
 }
 
+/* =================== video area======================= */
+
+/* =======header========= */
+
+#presentation header{
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--background-headers);
+    padding-block:1rem;
+}
+
+/* ==========buttons=========== */
+
+#presentation .wrapper h3{
+    margin-bottom: 1rem;
+}
+
+#presentation #buttons{
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+#presentation #buttons button, #presentation #buttons a:nth-child(1) {
+    background: var(--primary-color);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+#presentation #buttons button:hover{
+    background: var(--button-hover);
+}
+
+#presentation #buttons button:active{
+    opacity: 0.7;
+}
+
+#presentation #buttons #download{
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.875rem;
+}
+
+#presentation #buttons #favorite.fav > svg path{
+    fill: yellow;
+}
+
+#presentation #buttons #cite{
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+}
+
+#presentation #buttons #cite:hover{
+    color: var(--button-hover);
+}
+
+#presentation #buttons #cite:active{
+    opacity: 0.7;
+}
+/* =========== video =========== */
+
+
+#video .video-content img:nth-of-type(2){
+    position: relative;
+
+}
+
+.video-content #video-info{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 100;
+    color: #FFFFFF;
+    padding: 2rem 1rem;
+    text-align: left;
+    justify-content: space-between;
+    max-width: 48rem;
+}
+
+#video #author{
+    display: grid;
+    grid-template-areas: "A B";
+    align-items: center;
+    gap:1.7rem;
+    width: fit-content;
+}
+
+#video #author img{
+    grid-area: A;
+    border-radius: 50%;
+    width: 4rem;
+}
+
+
+
+#video #author #info{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    grid-area: B;
+    width: fit-content;
+}
