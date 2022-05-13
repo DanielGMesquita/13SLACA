@@ -42,6 +42,10 @@ ul{
 img{
     max-width: 100%;
 }
+
+section{
+    border-bottom:1px solid #ECECEC;
+}
 /* ============ NAVIGATION =================== */
 nav{
     display: flex;
@@ -332,7 +336,7 @@ header #content h3{
     position: absolute;
     right: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1;
     font-size: 0.8rem;
     gap:7rem;
     max-width: 28.5rem;
@@ -369,6 +373,7 @@ header #content h3{
 #details {
     width: 100vw;
     font-family: 'Quicksand', sans-serif;
+    margin-top: 2rem;
 }
 
 #details header{
@@ -408,3 +413,79 @@ header #content h3{
     opacity: 0.7;
     letter-spacing: 0.02rem;
 }
+
+/* ======= SUMMARY ============== */
+#presentation-summary{
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 2rem;
+    border: 1px solid #ECECEC;
+}
+
+#presentation-summary header, #forum header{
+    background: var(--background-headers);
+    color: var(--primary-color);
+    padding: 1rem 0;
+    border-bottom:1px solid #ECECEC;
+}
+
+#summary.text-expanded{
+    height: 100%;
+}
+
+
+#summary .open-close{
+    display: flex;
+    justify-content: right;
+
+}
+
+#summary .open-summary{
+    position: relative;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+#summary .close-summary{
+    position: absolute;
+    visibility: hidden;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+#summary p{
+    overflow:hidden;
+    position: relative;
+    max-height: 10.5rem;
+    text-align: justify;
+    grid-area: A;
+    line-height: 1.5rem;
+}
+
+#summary p:before {
+    content: '...';
+    background: #FFFFFF;
+    height: 1.5rem;
+    width: 1rem;
+    position: absolute;
+    right:0rem;
+    bottom: 0;
+}
+
+#summary.text-expanded p:before {
+    opacity: 0;
+}
+
+#summary.text-expanded p{
+    overflow: initial;
+    max-height: fit-content;
+}
+
+#summary.text-expanded .close-summary{
+    visibility: visible;
+}
+
+#summary.text-expanded .open-summary{
+    visibility: hidden;
+}
+

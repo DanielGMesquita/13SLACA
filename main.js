@@ -22,6 +22,14 @@ function closeMenu(){
     document.body.classList.remove('menu-expanded')
 }
 
+function openSummary(){
+    summary.classList.add('text-expanded')
+}
+
+function closeSummary(){
+    summary.classList.remove('text-expanded')
+}
+
 function favoriteButton(){
     if(favorite.classList.contains('fav')){
         favorite.classList.remove('fav');
