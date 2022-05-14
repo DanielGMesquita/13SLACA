@@ -40,12 +40,20 @@ function favoriteButton(){
 }
 
 function createTopic(){
-    forum.classList.add('topic-start')
+    beforeTopic.classList.add('topic-start')
+    topicForm.classList.add('open-form')
 }
 
 function submitTopic(){
-    forum.classList.remove('topic-start')
-    forum.classList.add('topic-sent')
+    topicForm.classList.remove('open-form')
+    topicForm.classList.add('topic-sent')
+    afterForm.classList.add('topic-sent')
+}
+
+function restartForum(){
+    beforeTopic.classList.remove('topic-start')
+    topicForm.classList.remove('topic-sent')
+    afterForm.classList.remove('topic-sent')
 }
 
 function boldText(){
@@ -57,12 +65,42 @@ function italicText(){
 }
 
 function likeButton(){
-    if(like.classList.contains('liked')){
-        like.classList.remove('liked');
-        plural.classList.remove('plus');
+    if(like1.classList.contains('liked')){
+        like1.classList.remove('liked');
+        numLikes1.classList.remove('liked');
+        removeLike1.classList.remove('liked');
+        plural.classList.remove('liked')
+
     }
     else{
-        like.classList.add('liked');
-        plural.classList.add('plus');
+        like1.classList.add('liked');
+        numLikes1.classList.add('liked');
+        removeLike1.classList.add('liked');
+        plural.classList.add('liked')
     }
+}
+
+
+function like2Button(){
+    if(like2.classList.contains('liked')){
+        like2.classList.remove('liked');
+        numLikes2.classList.remove('liked');
+        removeLike2.classList.remove('liked');
+
+    }
+    else{
+        like2.classList.add('liked');
+        numLikes2.classList.add('liked');
+        removeLike2.classList.add('liked');
+    }
+}
+
+function showReplies(){
+    if(replies.classList.contains('expanded')){
+        replies.classList.remove('expanded');
+    }
+    else{
+        replies.classList.add('expanded')
+    }
+    
 }

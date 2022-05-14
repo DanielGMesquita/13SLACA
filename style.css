@@ -506,26 +506,27 @@ header #content h3{
 
 /* =========== FORUM =========== */
 
+/* ====== before ======== */
 
-#forum #before-topic h4{
+#forum #beforeTopic h4{
     color: var(--primary-color);
     padding: 1rem 0 2rem;
     font-size: 1.2rem;
 }
 
-#forum #before-topic #icons{
+#forum #beforeTopic #icons{
     display: flex;
     flex-direction: row;
     gap: 5rem;
     margin-bottom: 3rem;
 }
 
-#forum #before-topic p{
+#forum #beforeTopic p{
     color: #595959;
     font-family: 'Quicksand', sans-serif;
 }
 
-#forum #before-topic button{
+#forum #beforeTopic button{
     background: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
     border-radius: 4px;
@@ -534,5 +535,272 @@ header #content h3{
     flex-direction: row;
     gap:0.5rem;
     padding: 0.8rem;
-    margin: 0 auto;
+    margin: 1.4rem auto;
+}
+
+#forum #beforeTopic button p{
+    color: #FFFFFF;
+}
+
+
+/* ======= form ========== */
+
+#forum #topicForm p{
+    font-family: 'Quicksand', sans-serif;
+    color: #5c5c5c;
+    padding: 1.5rem 0 2.2rem;
+}
+
+#forum #topicForm form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#forum #topicForm form .inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: left;
+}
+
+#forum #topicForm form .inputs label{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+#forum #topicForm form .inputs input,
+#forum #topicForm form .inputs textarea{
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    color: #4d4d4d;
+    padding: 1rem;
+    border: 1px solid #CCCCCC;
+    border-radius: 0.3rem;
+}
+
+#forum #topicForm #bottom-bar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background: #CCCCCC;
+    border-radius: 0 0 0.4rem 0.4rem;
+    padding: 0;
+    height: fit-content;
+}
+
+#forum #topicForm #bottom-bar #text-deco{
+    display: flex;
+    gap: 2rem;
+    padding-left: 1rem;
+}
+
+#forum #topicForm #bottom-bar #text-deco button{
+    border: none;
+    background: none;
+}
+
+#forum #topicForm #bottom-bar button#send{
+    background: linear-gradient(180deg, #FEB154 0%, #F1833E 100%);
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 0 0 0.4rem 0;
+    padding: 0.7rem 3rem; 
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* ===== after ====== */
+#forum #afterForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#forum #afterForm #front{
+    background: #DDDDDD;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 3rem 0;
+    position: relative;
+    width: 100%;
+    opacity: 0.9;
+}
+
+#forum #afterForm #back{
+    position: absolute;
+    z-index: -1;
+    width: 28.5rem;
+    opacity: 0.5;
+}
+
+
+/* ====== replies ========= */
+
+#forum .wrapper .user-topic{
+    font-family: 'Quicksand', sans-serif;
+    text-align: justify;
+}
+
+#forum .wrapper .user-topic h4{
+    color: var(--primary-color);
+    font-size: 1.4rem;
+}
+
+#forum .wrapper .user-topic h4 + p{
+    font-size: 0.8rem;
+    padding-bottom: 1rem;
+}
+
+#forum .wrapper .user-topic p + p{
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+#forum #user-topics .interactions{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+#forum #user-topics .interactions button{
+    border: 0;
+    cursor: pointer;
+}
+
+
+#forum #user-topics .interactions button:nth-child(1){
+    background: none;
+}
+
+
+#forum #user-topics .interactions button + button{
+    background: #ED7839;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 0.2rem;
+    padding: 0.5rem 0.5rem 0;
+}
+
+#forum #user-topics .interactions button.liked svg path,
+#forum #user-topics .interactions button.liked svg path{
+    fill: yellow;
+}
+
+#forum #user-topics .user-topic .interactions p,
+#forum #user-topics .user-topic .interactions span{
+    font-size: 1rem;
+    margin: 0;
+}
+
+#form .user-topic{
+    overflow: hidden;
+}
+
+#forum .user-topic #replies{
+    overflow: hidden;
+    visibility: hidden;
+    height: 0;
+}
+
+#forum .user-topic #replies.expanded{
+    visibility: visible;
+    overflow: initial;
+    height: fit-content;
+}
+
+#forum #beforeTopic{
+    visibility: visible;
+    height: fit-content;
+}
+
+#forum #beforeTopic.topic-start{
+    visibility: hidden;
+    height: 0;
+}
+
+#forum #topicForm{
+    visibility: hidden;
+    height: 0;
+}
+
+#forum #topicForm.open-form{
+    visibility:visible;
+    height: fit-content;
+}
+
+#forum #topicForm.topic-sent{
+    visibility:hidden;
+    height: 0;
+}
+
+#forum #afterForm{
+    visibility: hidden;
+    height: 0;
+}
+
+#forum #afterForm.topic-sent{
+    visibility: visible;
+    height: fit-content;
+}
+
+.user-topic .interactions #numLikes2{
+    visibility:hidden;
+    position: absolute;
+}
+
+.user-topic .interactions #removeLike2{
+    visibility: visible;
+    position: relative;
+
+}
+
+.user-topic .interactions #numLikes2.liked{
+    visibility:visible;
+
+
+}
+
+.user-topic .interactions #removeLike2.liked{
+    visibility: hidden;
+
+}
+
+.user-topic .interactions #numLikes1{
+    visibility:hidden;
+    position: absolute;
+}
+
+.user-topic .interactions #removeLike1{
+    visibility: visible;
+    position: relative;
+
+}
+
+.user-topic .interactions #numLikes1.liked{
+    visibility:visible;
+
+
+}
+
+.user-topic .interactions #removeLike1.liked{
+    visibility: hidden;
+
+}
+
+.user-topic .interactions #plural{
+    visibility: hidden;
+}
+
+.user-topic .interactions #plural.liked{
+    visibility: visible;
+}
+
+#replies
+
+#replies .author-coauthor .author-top p{
+    font-weight: 700;
 }
