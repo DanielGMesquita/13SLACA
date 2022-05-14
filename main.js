@@ -38,3 +38,31 @@ function favoriteButton(){
         favorite.classList.add('fav')
     }
 }
+
+function createTopic(){
+    forum.classList.add('topic-start')
+}
+
+function submitTopic(){
+    forum.classList.remove('topic-start')
+    forum.classList.add('topic-sent')
+}
+
+function boldText(){
+
+}
+
+function italicText(){
+
+}
+
+function likeButton(){
+    if(like.classList.contains('liked')){
+        like.classList.remove('liked');
+        plural.classList.remove('plus');
+    }
+    else{
+        like.classList.add('liked');
+        plural.classList.add('plus');
+    }
+}
