@@ -51,17 +51,27 @@ function submitTopic(){
 }
 
 function restartForum(){
-    beforeTopic.classList.remove('topic-start')
     topicForm.classList.remove('topic-sent')
+    topicForm.classList.add('open-form')
     afterForm.classList.remove('topic-sent')
 }
 
 function boldText(){
-
+    if(bold.classList.contains('bold-text')){
+        bold.classList.remove('bold-text');
+    }
+    else{
+        bold.classList.add('bold-text')
+    }
 }
 
 function italicText(){
-
+    if(italic.classList.contains('italic-text')){
+        italic.classList.remove('italic-text');
+    }
+    else{
+        italic.classList.add('italic-text')
+    }
 }
 
 function likeButton(){
