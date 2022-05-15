@@ -68,6 +68,11 @@ nav .wrapper{
     justify-content: space-between;
 }
 
+nav#navigation .wrapper h1{
+    display:none;
+    visibility: hidden;
+}
+
 nav .logo img{
     width: 5.5rem;
     border:none;
@@ -392,6 +397,10 @@ header #content h3{
 
 #details header{
     background: var(--background-headers);
+    color: #725C5C;
+    text-align: left;
+    padding-left: 1rem;
+    font-size: 2rem;
 }
 
 #details #details-content{
@@ -437,9 +446,12 @@ header #content h3{
 
 #presentation-summary header, #forum header{
     background: var(--background-headers);
-    color: var(--primary-color);
+    color: #725C5C;
     padding: 1rem 0;
     border-bottom:1px solid #ECECEC;
+    text-align: left;
+    padding-left: 1rem;
+    font-size: 2rem;
 }
 
 #summary.text-expanded{
@@ -858,6 +870,11 @@ header #content h3{
     .wrapper{
         width: initial;
     }
+
+    img{
+        max-width: initial;
+    }
+
     nav{
         margin: 0;
         padding: 0;
@@ -901,6 +918,7 @@ header #content h3{
 
     .field-a{
         grid-area: A;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     }
 
     .field-b{
@@ -915,10 +933,26 @@ header #content h3{
         width: 22rem;
     }
 
+    nav#navigation .wrapper .logo img{
+        width: 100%;
+    }
+
     nav#navigation .menu ul {
         display: flex;
         flex-direction: column;
         width: 22rem;
+    }
+
+    nav#navigation .menu ul li{
+        display: flex;
+        align-items: center;
+    }
+
+    nav#navigation .menu ul li a{
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+        color: #725C5C;
+        padding:0.7rem 2.4rem;
     }
 
     nav#navigation .wrapper{
@@ -939,8 +973,7 @@ header #content h3{
         margin-inline: auto;
         align-items: center;
         background: var(--background-headers);
-        padding: 0 3.6rem;
-
+        padding: 0.5rem 3.6rem;
     }
 
     .web-top #main-header{
@@ -949,9 +982,21 @@ header #content h3{
         text-align: justify;
     }
 
+    .web-top #main-header h3{
+        font-size: 2.2rem;
+    }
+
+    .web-top #main-header p{
+        font-size: 1.4rem;
+    }
+
     .web-top #user-settings{
         padding: 0;
         width: fit-content;
+    }
+
+    .web-top #user-settings .wrapper{
+        gap:3.5rem
     }
 
     .field-c{
@@ -973,6 +1018,10 @@ header #content h3{
         grid-area: A;
     }
 
+    #presentation header h3{
+        font-size: 2rem;
+    }
+
     #presentation #video{
         grid-area: B;
     }
@@ -981,6 +1030,7 @@ header #content h3{
         grid-area: C;
         width: 24.2rem;
         margin-top: 0;
+
     }
 
     #presentation #details #details-content.wrapper{
@@ -1018,16 +1068,122 @@ header #content h3{
 
     #video #video-wrapper #video-content.wrapper img{
         position: relative;
+        max-width: initial;
+        width: 78.3rem;
     }
 
     #video #video-wrapper #video-content{
         position: absolute;
         max-width: fit-content;
+        height: 43.9rem;
+        justify-content: space-between;
+        padding-bottom: 5.2rem;
     } 
 
     #video #video-wrapper #video-content h3{
         font-size: 2.4rem;
-        width: 73.4rem;
+        width: 76rem;
+        padding: 3.2rem;
+    }
+
+    #video #video-wrapper #video-content img{
+        width: 100%;
+    }
+
+    #video #video-wrapper #video-content h2{
+        font-size: 3.4rem;
+    }
+
+    #video #video-wrapper #video-content h4{
+        font-size: 2rem;
+    }
+
+    nav#navigation .wrapper h1{
+        display:flex;
+        align-self: center;
+        visibility:visible;
+        width: 22rem;
+        align-items: center;
+        padding: 2.2rem;
+        font-size: 3rem;
+        height: 6.8rem;
+        color: #FFFFFF;
+        background: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
+    }
+
+    #details{
+        width: fit-content;
+    }
+
+    #details #details-content{
+        padding: 1.5rem;
+        letter-spacing: 0.02rem;
+    }
+
+    #details #details-content p{
+        font-size: 1.2rem;
+        line-height: 1.44rem;
+    }
+    
+    #details #details-content label{
+        font-size: 1.4rem;
+        line-height: 1.68rem;
+        margin-top: 3rem;
+    }
+    
+    #details #details-content p:nth-child(3){
+        margin-bottom: 1rem;
+    }
+    
+    #details #details-content #authors{
+        margin-bottom: 3rem;
+        font-size: 1.4rem;
+        line-height: 1.68rem;
+    }
+    
+    #details #details-content #universities{
+        font-size: 1rem;
+        line-height: 1rem;
+        opacity: 0.7;
+        letter-spacing: 0.02rem;
+    }
+
+    #presentation-summary, #forum{
+        padding: 0 4.3rem;
+    }
+
+    #summary.wrapper p{
+        font-size: 1.4rem;
+    }
+
+    #summary.wrapper, #forum .wrapper{
+        border: 1px solid #ECECEC;
+        border-radius: 0.3rem;
+        margin-bottom: 3rem;
+    }
+
+    #summary.wrapper .open-close a{
+        font-size: 1.4rem;
+    }
+
+    #forum .wrapper #beforeTopic #icons{
+        justify-content: center;
+    }
+
+    #forum .wrapper #beforeTopic h4{
+        font-size: 1.8rem;
+    }
+
+    #forum .wrapper #beforeTopic p{
+        font-size: 1.4rem;
+    }
+
+    #forum .user-topic{
+        padding: 1.7rem 2.4rem;
+    }
+
+    #forum .user-topic p{
+        font-size: 1.4rem;
     }
 
 }
